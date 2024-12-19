@@ -1,0 +1,14 @@
+const getStudents = "SELECT * FROM student";
+const addStudent = "INSERT INTO student( name, email, age, dob) VALUES ($1, $2, $3, $4);";
+const getStudentById = "SELECT * FROM student WHERE id = $1";
+const checkEmailExists ="SELECT s FROM student s WHERE s.email= $1";
+const removeStudent = "DELETE FROM student WHERE id = $1";
+const updateStudent = "UPDATE student SET name = $1 , email = $2 , age = $3 , dob = $4  WHERE id = $5";
+module.exports = {
+    getStudents,
+    addStudent,
+    checkEmailExists,
+    getStudentById,
+    removeStudent,
+    updateStudent,
+};
