@@ -6,10 +6,6 @@ const port = 8080;
 
 app.use(express.json());
 
-app.get("/",(req,res)=>{
-    res.send("hello world");
-});
-
 app.use('/api/v1/students',studentRouter);
 app.listen(port , ()=>{
     console.log(`app listening  on port ${port}`)
